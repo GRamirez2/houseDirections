@@ -1,0 +1,23 @@
+:root {
+  /* Colors */
+  --black: #232323;
+  --grey: #676869;
+  --red: #AB3E5B;
+  --white: #f4f4f4;
+
+  /* Overlays */
+  --overlayBgColor: rgba(0,0,0,0.8);
+  --overlayBgColor1: rgba(0,0,0,0.6);
+  --overlayBgColor2: rgba(0,0,0,0.4);
+  --overlayBgColor3: rgba(0,0,0,0.2);
+  --overlayBgColor4: rgba(0,0,0,0.1);
+
+  /* Buttons */
+  --buttonBgColor: #33C3F0;
+  --buttonBgColorHover: #1EAEDB;
+
+  /* Media Queries*/
+  --medium: 767px;
+  --large: 980px;
+  --xlarge: 1023px;
+}

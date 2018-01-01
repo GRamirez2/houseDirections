@@ -1,0 +1,7 @@
+/*Images*/
+.img-fluid {
+  max-width: 100%;
+}
+.img-round {
+  border-radius: 50%;
+}

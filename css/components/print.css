@@ -1,0 +1,211 @@
+
+@media print {
+  .no-float-print {
+    float: none;
+  }
+
+  .no-padding-print {
+    padding: 0;
+  }
+
+  .no-margin-print {
+    margin: 0;
+  }
+
+  .none-print {
+    display: none;
+  }
+
+  .block-print {
+    display: block;
+  }
+
+  .inline-block-print {
+    display: inline-block;
+  }
+
+  .inline-print {
+    display: inline;
+  }
+
+  .text-left-print {
+    text-align: left;
+  }
+
+  .text-right-print {
+    text-align: right;
+  }
+
+  .text-center-print {
+    text-align: center;
+  }
+
+  .text-justify-print {
+    text-align: justify;
+  }
+
+  .no-col-print {
+    width: auto;
+    float: none;
+  }
+
+  .no-push-print, .no-pull-print {
+    left: 0;
+  }
+
+  .pt-0-print {
+    padding-top: 0;
+  }
+
+  .pt-5-print {
+    padding-top: 5px;
+  }
+
+  .pt-10-print {
+    padding-top: 10px;
+  }
+
+  .pt-15-print {
+    padding-top: 15px;
+  }
+
+  .pt-20-print {
+    padding-top: 20px;
+  }
+
+  .pt-25-print {
+    padding-top: 25px;
+  }
+
+  .pt-30-print {
+    padding-top: 30px;
+  }
+
+  .pt-35-print {
+    padding-top: 35px;
+  }
+
+  .pt-40-print {
+    padding-top: 40px;
+  }
+
+  .pt-45-print {
+    padding-top: 45px;
+  }
+
+  .pt-50-print {
+    padding-top: 50px;
+  }
+
+  .pt-55-print {
+    padding-top: 55px;
+  }
+
+  .pt-60-print {
+    padding-top: 60px;
+  }
+
+  .pb-0-print {
+    padding-bottom: 0;
+  }
+
+  .pb-5-print {
+    padding-bottom: 5px;
+  }
+
+  .pb-10-print {
+    padding-bottom: 10px;
+  }
+
+  .pb-15-print {
+    padding-bottom: 15px;
+  }
+
+  .pb-20-print {
+    padding-bottom: 20px;
+  }
+
+  .pb-25-print {
+    padding-bottom: 25px;
+  }
+
+  .pb-30-print {
+    padding-bottom: 30px;
+  }
+
+  .pb-35-print {
+    padding-bottom: 35px;
+  }
+
+  .pb-40-print {
+    padding-bottom: 40px;
+  }
+
+  .pb-45-print {
+    padding-bottom: 45px;
+  }
+
+  .pb-50-print {
+    padding-bottom: 50px;
+  }
+
+  .pb-55-print {
+    padding-bottom: 55px;
+  }
+
+  .pb-60-print {
+    padding-bottom: 60px;
+  }
+
+  .p-0-print {
+    padding: 0;
+  }
+
+  .p-5-print {
+    padding: 5px;
+  }
+
+  .p-10-print {
+    padding: 10px;
+  }
+
+  .p-15-print {
+    padding: 15px;
+  }
+
+  .p-20-print {
+    padding: 20px;
+  }
+
+  .p-25-print {
+    padding: 25px;
+  }
+
+  .p-30-print {
+    padding: 30px;
+  }
+
+  .p-35-print {
+    padding: 35px;
+  }
+
+  .p-40-print {
+    padding: 40px;
+  }
+
+  .p-45-print {
+    padding: 45px;
+  }
+
+  .p-50-print {
+    padding: 50px;
+  }
+
+  .p-55-print {
+    padding: 55px;
+  }
+
+  .p-60-print {
+    padding: 60px;
+  }
+}

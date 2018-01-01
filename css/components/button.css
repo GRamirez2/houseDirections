@@ -1,0 +1,60 @@
+.btn,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  background-color: transparent;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 85%;
+  height: 38px;
+  letter-spacing: .1rem;
+  line-height: 38px;
+  padding: 0 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background .3s ease-in-out, color .3s ease-in-out;
+  white-space: nowrap;
+}
+.btn:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.btn:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  border-color: var(--grey);
+  outline: 0;
+}
+
+.btn.btn-primary,
+button.btn-primary,
+input[type="submit"].btn-primary,
+input[type="reset"].btn-primary,
+input[type="button"].btn-primary {
+  color: var(--white);
+  background-color: var(--buttonBgColor);
+  border-color: var(--buttonBgColor);
+}
+
+.btn.btn-primary:hover,
+button.btn-primary:hover,
+input[type="submit"].btn-primary:hover,
+input[type="reset"].btn-primary:hover,
+input[type="button"].btn-primary:hover,
+.btn.btn-primary:focus,
+button.btn-primary:focus,
+input[type="submit"].btn-primary:focus,
+input[type="reset"].btn-primary:focus,
+input[type="button"].btn-primary:focus {
+  color: var(--white);
+  background-color: var(--buttonBgColorHover);
+  border-color: var(--buttonBgColorHover);
+}

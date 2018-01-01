@@ -1,0 +1,65 @@
+/*Positions*/
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.static {
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.z-0 {
+  z-index: 0;
+}
+.z-1 {
+  z-index: 1;
+}
+.z-5 {
+  z-index: 5;
+}
+
+@media only screen and (min-width: var(--medium)) {
+
+  .relative-m {
+    position: relative;
+  }
+
+  .absolute-m {
+    position: absolute;
+  }
+
+  .static-m {
+    position: static;
+  }
+
+  .fixed-m {
+    position: fixed;
+  }
+}
+
+
+
+@media only screen and (min-width: var(--large)) {
+  .relative-l {
+    position: relative;
+  }
+
+  .absolute-l {
+    position: absolute;
+  }
+
+  .static-l {
+    position: static;
+  }
+
+  .fixed-l {
+    position: fixed;
+  }
+}

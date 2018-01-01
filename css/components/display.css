@@ -1,0 +1,52 @@
+/*Display Types*/
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+@media only screen and (min-width: var(--medium)) {
+  .none-m {
+    display: none;
+  }
+
+  .block-m {
+    display: block;
+  }
+
+  .inline-block-m {
+    display: inline-block;
+  }
+
+  .inline-m {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: var(--large)) {
+  .none-l {
+    display: none;
+  }
+
+  .block-l {
+    display: block;
+  }
+
+  .inline-block-l {
+    display: inline-block;
+  }
+
+  .inline-l {
+    display: inline;
+  }
+}

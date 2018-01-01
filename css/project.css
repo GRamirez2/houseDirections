@@ -1,0 +1,18 @@
+@import './vars.css';
+/** {*/
+  /*background-color: rgba(12,34,123,.05);*/
+  /*border: 1px solid rgba(0,0,0,.1);*/
+/*}*/
+
+body {
+  color: var(--black);
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Georgia', Georgia, Times New Roman, sans-serif;
+}
+
+a {
+  color: var(--red);
+}

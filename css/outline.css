@@ -1,0 +1,20 @@
+@import './vars.css';
+
+.wrap,
+.container,
+.grid,
+[class*='col-'] {
+  background-color: rgba(12,34,123,.05);
+  border: 1px solid rgba(0,0,0,.1);
+}
+
+
+/*.wrap {*/
+  /*background-color: var(--red);*/
+/*}*/
+/*.grid {*/
+  /*background-color: var(--orange);*/
+/*}*/
+/*[class*='col-'] {*/
+  /*background-color: var(--yellow);*/
+/*}*/

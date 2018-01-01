@@ -1,0 +1,39 @@
+
+/*Backgrounds*/
+.bg-image-cover {
+  background-size: cover;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+.bg-center {
+  background-position: center center;
+}
+
+.overlay {
+  background-color: var(--overlayBgColor);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+.overlay-1 {
+  background-color: var(--overlayBgColor1);
+}
+.overlay-2 {
+  background-color: var(--overlayBgColor2);
+}
+.overlay-3 {
+  background-color: var(--overlayBgColor3);
+}
+.overlay-4 {
+  background-color: var(--overlayBgColor4);
+}
