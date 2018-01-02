@@ -1,19 +1,12 @@
-function log(messages) {
-  console.log (messages);
-}
+log('Installing Service Worker')
 
-log('Installing Service Worker ')
-
-self.addEventListener('install', (event) =>  event.waitUntil(installServiceWorker())
-
-);
+self.addEventListener('install', (event) =>  event.waitUntil(installServiceWorker()));
 
 async function installServiceWorker(){
   log('Service Worker installation started');
   const request = new Request('offline.html')
   const response = await fetch(request)
-  log('response received after loading offline.html') // adding the response to this log didn't work
-  log(response)
+  log('response received after loading offline.html', response)
 
   if (response.status !== 200){
     throw new Error ('Could not load offline page!');
@@ -28,3 +21,25 @@ async function installServiceWorker(){
 self.addEventListener('activate', () => {
   log('service worker activated')
 });
+
+self.addEventListener('fetch', event => event.respondWith(showOfflineIfError(event)));
+
+async function showOfflineIfError(event){
+  let response;
+  try {
+    log('Calling network:' + event.request.url);
+
+    response = await fetch(event.request);
+  }
+  catch(err){
+    log('Network request Failed. Serving offline page', err);
+    const cache = await caches.open('app-cache');
+    response = cache.match('offline.html');
+
+  }
+  return response;
+}
+
+function log(messages, ...data) {
+  console.log (messages, ...data);
+}
