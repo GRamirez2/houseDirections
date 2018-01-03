@@ -4,7 +4,7 @@ self.addEventListener('install', (event) =>  event.waitUntil(installServiceWorke
 
 async function installServiceWorker(){
   log('Service Worker installation started');
-  const request = new Request('offline.html')
+  const request = new Request('offline.html') // how do I get the all css dir in here/?
   const response = await fetch(request)
   log('response received after loading offline.html', response)
 
