@@ -5,5 +5,4 @@ if ('serviceWorker' in navigator){
       .then((registration) => {
         console.log('Service worker registation completed')
       }
-  )
-}else{console.log('no serviceWorker in navigator')}
+      )}else{console.log('no serviceWorker in navigator')}

@@ -1,43 +1,78 @@
+const VERSION = 'V16';
+
 log('Installing Service Worker')
 
 self.addEventListener('install', (event) =>  event.waitUntil(installServiceWorker()));
 
 async function installServiceWorker(){
-  log('Service Worker installation started');
-  const request = new Request('offline.html') // how do I get the all css dir in here/?
-  const response = await fetch(request)
-  log('response received after loading offline.html', response)
 
-  if (response.status !== 200){
-    throw new Error ('Could not load offline page!');
-  }
+  const cache = await caches.open(getCacheName());
 
-  const cache = await caches.open('app-cache');
-  cache.put(request, response);
-  log('Cached offline.html');
-
+  return cache.addAll([
+    '/',
+    '/css/index.css',
+    '/css/project.css',
+    '/sw-register.js',
+    '/css/components/reset.css',
+    '/css/components/reset-utils.css',
+    '/css/components/typography.css',
+    '/css/components/table.css',
+    '/css/components/backgrounds.css',
+    '/css/components/display.css',
+    '/css/components/flex.css',
+    '/css/components/form.css',
+    '/css/components/grid.css',
+    '/css/components/height-width.css',
+    '/css/components/image.css',
+    '/css/components/list.css',
+    '/css/components/margin.css',
+    '/css/components/padding.css',
+    '/css/components/position.css',
+    '/css/components/print.css',
+    '/css/components/text-font.css',
+    '/css/components/button.css',
+    '/css/vars.css'
+  ]);
 }
 
-self.addEventListener('activate', () => {
-  log('service worker activated')
-});
+function getCacheName(){
+  return 'directions-cache-' + VERSION
+}
 
-self.addEventListener('fetch', event => event.respondWith(showOfflineIfError(event)));
+self.addEventListener('activate', () => activeSW());
 
-async function showOfflineIfError(event){
-  let response;
-  try {
-    log('Calling network:' + event.request.url);
+// need an async function to the await to work, so move it out of addEventListner
+async function activeSW(){
+  log('service worker activated');
 
-    response = await fetch(event.request);
+  const cacheKeys = await caches.keys();
+
+  cacheKeys.forEach(cacheKey => {
+    if (cacheKey !== getCacheName()){
+      caches.delete(cacheKey);
+    }
+  })
+}
+
+self.addEventListener('fetch', event => event.respondWith(cacheThenNetwork(event)));
+
+async function cacheThenNetwork(event){
+
+  const cache = await caches.open(getCacheName());
+
+  const cachedResponse = await cache.match(event.request);
+
+  if(cachedResponse){
+    log('From Cache: ' + event.request.url);
+    return cachedResponse;
   }
-  catch(err){
-    log('Network request Failed. Serving offline page', err);
-    const cache = await caches.open('app-cache');
-    response = cache.match('offline.html');
 
-  }
-  return response;
+  const networkResponse = await fetch(event.request);
+
+  log('Calling Network: ' + event.request.url);
+
+  return networkResponse;
+
 }
 
 function log(messages, ...data) {
