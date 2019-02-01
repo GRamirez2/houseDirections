@@ -9,7 +9,7 @@ async function installServiceWorker(){
   const cache = await caches.open(getCacheName());
 
   return cache.addAll([
-    // '/',
+    '/',
     '/css/index.css',
     '/css/project.css',
     '/sw-register.js',
